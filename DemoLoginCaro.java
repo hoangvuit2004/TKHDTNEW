@@ -97,6 +97,12 @@ public class DemoLoginCaro {
               closeLogin();
           }
       });
+      buttonLogout.addActionListener(new ActionListener() {
+          @Override
+          public void actionPerformed(ActionEvent e) {
+              System.exit(0);
+          }
+      });
       frame.revalidate();
 
   }

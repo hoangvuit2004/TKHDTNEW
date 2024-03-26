@@ -89,18 +89,23 @@ public class CreateLogin {
            String email = textEmail.getText();
            String pass = new String(passwordField.getPassword());
            String pass1 = new String(passwordField1.getPassword());
+           if(pass.length() < 5){
+               JOptionPane.showMessageDialog(frame, "Vui lòng nhập mật khẩu mạnh hơn.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+           }else{
+               if(accountName.isEmpty() || email.isEmpty() || pass.isEmpty() || pass1.isEmpty()) {
+                   JOptionPane.showMessageDialog(frame, "Vui lòng điền đầy đủ thông tin.", "Thông báo", JOptionPane.WARNING_MESSAGE);
+               } else if(!pass.equals(pass1)) {
+                   JOptionPane.showMessageDialog(frame, "Mật khẩu nhập lại không khớp.", "Thông báo", JOptionPane.ERROR_MESSAGE);
+               } else {
+                   JOptionPane.showMessageDialog(frame, "Đăng kí thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
+                   DemoLoginCaro demo  = new DemoLoginCaro();
+                   demo.demoLogin();
+                   closeLogin();
 
-           if(accountName.isEmpty() || email.isEmpty() || pass.isEmpty() || pass1.isEmpty()) {
-               JOptionPane.showMessageDialog(frame, "Vui lòng điền đầy đủ thông tin.", "Thông báo", JOptionPane.WARNING_MESSAGE);
-           } else if(!pass.equals(pass1)) {
-               JOptionPane.showMessageDialog(frame, "Mật khẩu nhập lại không khớp.", "Thông báo", JOptionPane.ERROR_MESSAGE);
-           } else {
-               JOptionPane.showMessageDialog(frame, "Đăng kí thành công!", "Thông báo", JOptionPane.INFORMATION_MESSAGE);
-               DemoLoginCaro demo  = new DemoLoginCaro();
-               demo.demoLogin();
-               closeLogin();
-
+               }
            }
+
+
 
        }
    });
