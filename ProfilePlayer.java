@@ -1,0 +1,135 @@
+public class ProfilePlayer {
+    int id;
+    String email = "#";
+    String name = "#";
+    String avatar = "icons8_circled_user_male_skin_type_7_96px.png";
+    String gender = "Nam";
+    int yearOfBirth = 2004;
+    int score = 0;
+    int matchCount = 0;
+    int winCount = 0;
+    int tieCount = 0;
+    int loseCount = 0;
+    int currentStreak = 0;
+    float winRate = 0;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(String avatar) {
+        this.avatar = avatar;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public void setYearOfBirth(int yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
+    }
+
+    public int getMatchCount() {
+        return matchCount;
+    }
+
+    public void setMatchCount(int matchCount) {
+        this.matchCount = matchCount;
+    }
+
+    public int getWinCount() {
+        return winCount;
+    }
+
+    public void setWinCount(int winCount) {
+        this.winCount = winCount;
+    }
+
+    public int getTieCount() {
+        return tieCount;
+    }
+
+    public void setTieCount(int tieCount) {
+        this.tieCount = tieCount;
+    }
+
+    public int getLoseCount() {
+        return loseCount;
+    }
+
+    public void setLoseCount(int loseCount) {
+        this.loseCount = loseCount;
+    }
+
+    public int getCurrentStreak() {
+        return currentStreak;
+    }
+
+    public void setCurrentStreak(int currentStreak) {
+        this.currentStreak = currentStreak;
+    }
+
+    public float getWinRate() {
+        return winRate;
+    }
+
+    public void setWinRate(float winRate) {
+        this.winRate = winRate;
+    }
+
+    public ProfilePlayer(int id, String email, String name, String avatar, String gender, int yearOfBirth, int score, int matchCount, int winCount, int tieCount, int loseCount, int currentStreak, float winRate) {
+        this.id = id;
+        this.email = email;
+        this.name = name;
+        this.avatar = avatar;
+        this.gender = gender;
+        this.yearOfBirth = yearOfBirth;
+        this.score = score;
+        this.matchCount = matchCount;
+        this.winCount = winCount;
+        this.tieCount = tieCount;
+        this.loseCount = loseCount;
+        this.currentStreak = currentStreak;
+        this.winRate = winRate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+}
